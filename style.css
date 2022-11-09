@@ -8,12 +8,32 @@ html{
     background-color: black;
     color: aquamarine;
 }
+
+
+
+.calcScreen{
+    display:flex;
+    border-style: ridge;
+    border-radius: 10%;
+    width: 20em;
+    height: 50px;
+    background-color: #BCBCBC;
+    padding-left: 1em;
+    margin: 1rem;
+    margin-top: 1rem;;
+}
+.numScreen{
+    font-size: 2.2rem;
+    font-family: 'VT323', monospace ;
+    color:aquamarine
+}
 .calcNumpad{
 display:flex;
-flex-direction: row;
+flex-direction: ;
 justify-content: flex-start;
 }
-.numbtn{
+
+.numbtn, .clearbtn, .equalbtn {
     background-color: black;
     color: aquamarine;
     font-family: 'VT323', monospace ;
@@ -24,16 +44,26 @@ justify-content: flex-start;
 	border-right: 6px inset rgba(255,255,255,.5);
 	border-top: 6px inset rgba(255,255,255,.5);
 	box-sizing: border-box;
-	color: white;
-	cursor: pointer;
+	cursor: crosshair;
 	display: inline-block;
 	font-size: 2.2rem;
 	margin: 1rem;
-	min-width: 200px;
-	padding: .5rem;
+/* 	min-width: 200px;
+ */	padding: .5rem;
 	text-transform: uppercase;
 	width: auto;
-	
+    max-width: 3rem;
+    min-width: 1rem;;
+	color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
 
 }
 .numbtn:hover{
@@ -43,20 +73,14 @@ justify-content: flex-start;
 
 
 .toprow{
-    display: flex;
-    flex-direction: row;
     flex: 0 0 auto;
 }
 
 .midrow{
-    display: flex;
-    flex-direction: row;
     flex: 0 0 auto;
 }
 
 .botrow{
-    display: flex;
-    flex-direction: row;
     flex: 0 0 auto;
 }
 
