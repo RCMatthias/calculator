@@ -9,13 +9,17 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-	<script src="script.js"></script>
 
 
     <div class="pageContainer">
         <div class = "calcContainer">
             <div class="calcScreen">
-                <div class="numScreen">80085</div>
+                <div class="operationScreen">
+                    <div class= "firstOperand"></div>
+                    <div class= "operator"></div>
+                    <div class= "secondOperand"></div>
+                </div>
+                <div class="resultScreen">0</div>
             </div>
            
         
@@ -23,25 +27,35 @@
         
             <div class="calcNumpad" >
                 <div class="toprow">
-                    <div><input class="numbtn" id="1" type="button" value="1" /></div>
-                    <div><input class="numbtn" id="2" type="button" value="2" /></div>
-                    <div><input class="numbtn" id="3" type="button" value="3" /></div>
+                    <div><button class="numbtn" value="1" data-number="1">1</button> </div>
+                    <div><button class="numbtn" value="2" data-number="2">2</button></div>
+                    <div><button class="numbtn" value="3" data-number="3">3</button></div>
                 </div>
                 <div class="midrow">
-                    <div><input class="numbtn" type="button" value="4" /></div>
-                    <div><input class="numbtn" type="button" value="5" /></div>
-                    <div><input class="numbtn" type="button" value="6" /></div>
+                    <div><button class="numbtn"   value="4" data-number="4">4</button></div>
+                    <div><button class="numbtn"   value="5" data-number="5">5</button> </div>
+                    <div><button class="numbtn"   value="6" data-number="6">6</button></div>
                 </div>
                 <div class="botrow">
-                    <div><input class="numbtn" type="button" value="7" /></div>
-                    <div><input class="numbtn" type="button" value="8" /></div>
-                    <div><input class="numbtn" type="button" value="9" /></div>
+                    <div><button class="numbtn"   value="7" data-number="7">7</button></div>
+                    <div><button class="numbtn"   value="8" data-number="8">8</button></div>
+                    <div><button class="numbtn"   value="9" data-number="9">9</button></div>
                 </div>
                 <div class="zerorow">
-                    <div><input class="numbtn" type="button" value="0" /></div>
+                    <div><button class="numbtn"   value="0" data-number="0">0</button></div>
                 </div>
-                <div class="clear"> <input class="clearbtn" type="button" value="Clear"/> </div>
-                <div class="equals"> <input class="equalbtn" type="button" value="="/> </div>
+                <div class="clear"> <button class="clearbtn"   value="Clear"></button> </div>
+                <div class="equals"> <button class="equalbtn"   value="="></button> </div>
+
+            <div class="operatorsPad">
+                <button class="operatorBtn" data-operator="+">+</button>
+                <button class="operatorBtn" data-operator="-">-</button>
+                <button class="operatorBtn" data-operator="x">*</button>
+                <button class="operatorBtn" data-operator="/">/</button>
+
+
+                </div>
+            </div>
 
 
 
@@ -61,6 +75,7 @@
         </div>
         
     </div>
- 
+    <script src="script.js" ></script>
+
   </body>
 </html>

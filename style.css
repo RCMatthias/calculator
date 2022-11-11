@@ -21,11 +21,20 @@ html{
     padding-left: 1em;
     margin: 1rem;
     margin-top: 1rem;;
+    justify-content: space-between;
 }
-.numScreen{
-    font-size: 2.2rem;
+.operationScreen{
+    display:flex;
+    font-size: 1.5rem;
     font-family: 'VT323', monospace ;
     color:aquamarine
+}
+
+.resultScreen{
+
+    font-size: 2.2rem;
+    font-family: 'VT323', monospace ;
+    color:rgb(31, 63, 52) ;
 }
 .calcNumpad{
 display:flex;
@@ -33,7 +42,7 @@ flex-direction: ;
 justify-content: flex-start;
 }
 
-.numbtn, .clearbtn, .equalbtn {
+.numbtn, .clearbtn, .equalbtn, .operatorBtn {
     background-color: black;
     color: aquamarine;
     font-family: 'VT323', monospace ;
@@ -74,6 +83,7 @@ justify-content: flex-start;
 
 .toprow{
     flex: 0 0 auto;
+    flex-direction: row;
 }
 
 .midrow{
@@ -85,5 +95,10 @@ justify-content: flex-start;
 }
 
 .zerorow{
+    flex: 0 0 auto;
 
+}
+
+.operatorsPad{
+    display:;
 }
