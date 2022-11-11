@@ -31,7 +31,7 @@ function updateOperator(value){
     {
         const newOperator = document.createElement("div")
         newOperator.textContent += value; 
-        document.querySelector('#os').appendChild(newOperator);
+        document.querySelector('#operationScreen').appendChild(newOperator);
    
     }
     else {
@@ -80,9 +80,8 @@ clearBtn.addEventListener('click', event => {
     operationScreen.textContent="";
    /*  firstOperand.textContent ="";
     operator.textContent="";
-    secondOperand.textContent=""
-    result.textContent ="0"; */
-
+    secondOperand.textContent="" */
+    result.textContent ="0"; 
 })
 //TODO FRIDAY:
 /* 
