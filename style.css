@@ -2,7 +2,10 @@
 
 html{
 	font-family: 'VT323', monospace ;
-    background-color: rgb(92, 0, 0);
+    background: url("/background_mickhaupt.jpg");
+    background-size: 100%;
+    background-blend-mode:hard-light;
+    background-color: #0fa;
 
 }
 .pageContainer{
@@ -11,6 +14,7 @@ html{
     color: aquamarine;
     display: flex;
     justify-content: center;
+    max-width: ;
 }
 
 

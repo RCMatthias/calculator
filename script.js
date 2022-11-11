@@ -83,10 +83,12 @@ clearBtn.addEventListener('click', event => {
     secondOperand.textContent="" */
     result.textContent ="0"; 
 })
-//TODO FRIDAY:
+//TODO SATURDAY:
 /* 
 *users should be able to string several operations and get the right answer
 with each pair of numbers evaluated at a time
+--> SecondOPERAND should also check if there is a "newoperator" already and append a new 
+div with the 3+ OPERANDs !
 
 *Calc should not evaluate more than a single pair of numbers at a time!
 µµ -- Should push the previously calculated pair to the screen and into the new calculated func
@@ -137,29 +139,5 @@ function operate (numOne, func, numTwo){
 }
 
 
-
-/*
-
-var displayVar = document.getElementsByClassName('.operationScreen')
-let updateOperands = (number) => {
-    
-    displayVar.textContent += number
-    console.log(displayVar)
-}  */
-
-/* 
-            1. Inital screen display is 0
-			2. replace initial display with user input if number is pressed
-			3. else concat with operator
-			4. if screen display is anything other than number concat the display
-
-             */
-//display value array
-//fn to push number into displayVar array 
-
-//Listen for clicks on btns 
-//add number to displayVar
-
-//store value of buttons in const WHEN CLICKED
 
 
