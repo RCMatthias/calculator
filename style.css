@@ -10,7 +10,10 @@ html{
 }
 
 
-
+.calcContainer{
+    display: grid;
+    
+}
 .calcScreen{
     display:flex;
     border-style: ridge;
@@ -37,12 +40,31 @@ html{
     color:rgb(31, 63, 52) ;
 }
 .calcNumpad{
-display:flex;
-flex-direction: ;
-justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(4, auto);
+    justify-items: stretch;
 }
 
-.numbtn, .clearbtn, .equalbtn, .operatorBtn {
+.toprow{
+    flex: 0 0 auto;
+    flex-direction: row;
+}
+
+.midrow{
+    flex: 0 0 auto;
+}
+
+.botrow{
+    flex: 0 0 auto;
+}
+
+.zerorow{
+    flex: 0 0 auto;
+}
+
+
+.numbtn, .clearBtn, .equalsBtn, .operatorBtn {
     background-color: black;
     color: aquamarine;
     font-family: 'VT323', monospace ;
@@ -80,25 +102,3 @@ justify-content: flex-start;
 
 }
 
-
-.toprow{
-    flex: 0 0 auto;
-    flex-direction: row;
-}
-
-.midrow{
-    flex: 0 0 auto;
-}
-
-.botrow{
-    flex: 0 0 auto;
-}
-
-.zerorow{
-    flex: 0 0 auto;
-
-}
-
-.operatorsPad{
-    display:;
-}
