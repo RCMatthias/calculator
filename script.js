@@ -3,6 +3,7 @@ const operatorButtons = document.querySelectorAll('[data-operator]')
 const equalsBtn = document.querySelector('.equalsBtn')
 const clearBtn = document.querySelector('.clearBtn')
 var result = document.querySelector('.resultScreen')
+let operationScreen = document.querySelector('.operationScreen')
 
 const firstOperand = document.querySelector(".firstOperand")
 const operator = document.querySelector(".operator")
@@ -19,16 +20,32 @@ function updateOperands(value){
 
 function updateOperator(value){
     if (firstOperand.textContent ==""){
-        return
-    }
-    if (operator.textContent == ("+") || operator.textContent ==("-") 
-        || operator.textContent =="*" || operator.textContent=="/") {
         return;
-    } else {
+    }
+   /*  if ((operator.textContent == ("+") || operator.textContent ==("-") 
+        || operator.textContent =="*" || operator.textContent=="/") && secondOperand.textContent != ""){
+        return;
+     }  */
+    if (secondOperand.textContent != "")  
+    // add new DOM element after secondoperand for the newOperator (?)
+    {
+        const newOperator = document.createElement("div")
+        newOperator.textContent += value; 
+        document.querySelector('#os').appendChild(newOperator);
+   
+    }
+    else {
         operator.textContent += value;
     }
     console.log(operator.textContent)
 }
+// This way, it become a simple algorithm that says, e
+//ach time you come across a second operator, some calculation needs to //
+//be performed with the prior two numbers.  
+
+
+// When a operator is pressed; but there is already another operator loaded; first run the calculate on existing pairs; then use the result for the new pair with clicked calculator! 
+
 
 //Click on number -> number gets added as operand to display
 numberButtons.forEach(button => {   
@@ -51,6 +68,8 @@ equalsBtn.addEventListener('click', event => {
   /*      let firstOperand = numOne;
         let secondOperand = numTwo; 
       let   operator = func;  */
+      
+
       let solution = operate (firstOperand.textContent, operator.textContent, secondOperand.textContent)
         result.textContent = solution 
         console.log (solution)
@@ -58,20 +77,29 @@ equalsBtn.addEventListener('click', event => {
 /* }) */
 
 clearBtn.addEventListener('click', event => {
-    firstOperand.textContent ="";
+    operationScreen.textContent="";
+   /*  firstOperand.textContent ="";
     operator.textContent="";
     secondOperand.textContent=""
-    result.textContent ="0";
+    result.textContent ="0"; */
 
 })
 //TODO FRIDAY:
 /* 
-*add functionality to equalsbtn 
-(make sure it does nothing when there is no operator yet)
+*users should be able to string several operations and get the right answer
+with each pair of numbers evaluated at a time
 
-*change textcontent resultscrn to result of operate 
+*Calc should not evaluate more than a single pair of numbers at a time!
+µµ -- Should push the previously calculated pair to the screen and into the new calculated func
+
+*Round answers with long decimals so they don't overflow the screen
+
+*Pressing = before all numbers or an operator should do nothing  EVER
+
+*pressing CLEAR should wipe out any existing data; make sure it's real fresh!
 
 */
+
 
 //Basic math operators
 function add (numOne, numTwo) {
