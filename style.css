@@ -2,11 +2,11 @@
 
 html{
 	font-family: 'VT323', monospace ;
-    background: url("/background_mickhaupt.jpg");
+/*     background: url("/background_mickhaupt.jpg");
     background-size: 100%;
     background-blend-mode:hard-light;
     background-color: #0fa;
-
+*/ 
 }
 .pageContainer{
     font-family: monospace;

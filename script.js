@@ -10,6 +10,8 @@ const operator = document.querySelector(".operator")
 const secondOperand = document.querySelector(".secondOperand")
 const newOperatorDiv = document.querySelector(".newOperator")
 
+var operVar = ""
+
 function updateOperands(value){
     if (operator.textContent == ""){
         firstOperand.textContent += value;
@@ -36,6 +38,8 @@ function updateOperator(value){
         || operator.textContent =="*" || operator.textContent=="/") && secondOperand.textContent != ""){
         return;
      }  */
+
+
     if (secondOperand.textContent != "")  
     // add new DOM element after secondoperand for the newOperator 
     {
@@ -61,18 +65,26 @@ function updateOperator(value){
 // When a operator is pressed; but there is already another operator loaded; 
 //first run the calculate on existing pairs; then use the result for the new pair with clicked calculator! 
 
-
+function operateCurrentPair() {
+    if (operVar == ""){
+        // every time we click a button, check if 
+        firstOperand.textContent;
+    }
+    else {
+        return
+    }
+}
 //Click on number -> number gets added as operand to display
 numberButtons.forEach(button => {   
     button.addEventListener('click', event => {
-        //check if there is a 2nd operator
-        
+     operateCurrentPair();
+        /*         //check if there is a 2nd operator
+
         if (document.querySelector(".newOperator")){
             addMoreOperands();
-        } else {
+        } else { */
             updateOperands(button.textContent) }
     })
-})
 
 operatorButtons.forEach(button => {   
     button.addEventListener('click', event => {
