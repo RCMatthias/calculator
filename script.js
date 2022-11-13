@@ -8,15 +8,27 @@ let operationScreen = document.querySelector('.operationScreen')
 const firstOperand = document.querySelector(".firstOperand")
 const operator = document.querySelector(".operator")
 const secondOperand = document.querySelector(".secondOperand")
+const newOperatorDiv = document.querySelector(".newOperator")
 
+var operVar = ""
 
 function updateOperands(value){
     if (operator.textContent == ""){
         firstOperand.textContent += value;
-    } else {
-        secondOperand.textContent += value;
     }
+    else {
+        secondOperand.textContent += value;
+    } 
+    
+    
 }
+function addMoreOperands (value){
+        const newOperand = document.createElement("div");
+        newOperand.classList.add('newOperand');
+        newOperand.textContent += value; 
+        document.querySelector('#operationScreen').appendChild(newOperand);
+
+    };
 
 function updateOperator(value){
     if (firstOperand.textContent ==""){
@@ -26,33 +38,53 @@ function updateOperator(value){
         || operator.textContent =="*" || operator.textContent=="/") && secondOperand.textContent != ""){
         return;
      }  */
+
+
     if (secondOperand.textContent != "")  
-    // add new DOM element after secondoperand for the newOperator (?)
+    // add new DOM element after secondoperand for the newOperator 
     {
         const newOperator = document.createElement("div")
+        newOperator.classList.add('newOperator');
         newOperator.textContent += value; 
         document.querySelector('#operationScreen').appendChild(newOperator);
-   
+      
+       
+       
+        /* *users should be able to string several operations and get the right answer
+        with each pair of numbers evaluated at a time
+        --> SecondOPERAND should also check if there is a "newoperator" already and 
+        append a new 
+        div with the 3+ OPERANDs ! */
     }
     else {
         operator.textContent += value;
     }
     console.log(operator.textContent)
 }
-// This way, it become a simple algorithm that says, e
-//ach time you come across a second operator, some calculation needs to //
-//be performed with the prior two numbers.  
 
+// When a operator is pressed; but there is already another operator loaded; 
+//first run the calculate on existing pairs; then use the result for the new pair with clicked calculator! 
 
-// When a operator is pressed; but there is already another operator loaded; first run the calculate on existing pairs; then use the result for the new pair with clicked calculator! 
-
-
+function operateCurrentPair() {
+    if (operVar == ""){
+        // every time we click a button, check if 
+        firstOperand.textContent;
+    }
+    else {
+        return
+    }
+}
 //Click on number -> number gets added as operand to display
 numberButtons.forEach(button => {   
     button.addEventListener('click', event => {
-        updateOperands(button.textContent)
+     operateCurrentPair();
+        /*         //check if there is a 2nd operator
+
+        if (document.querySelector(".newOperator")){
+            addMoreOperands();
+        } else { */
+            updateOperands(button.textContent) }
     })
-})
 
 operatorButtons.forEach(button => {   
     button.addEventListener('click', event => {
@@ -87,7 +119,8 @@ clearBtn.addEventListener('click', event => {
 /* 
 *users should be able to string several operations and get the right answer
 with each pair of numbers evaluated at a time
---> SecondOPERAND should also check if there is a "newoperator" already and append a new 
+--> SecondOPERAND should also check if there is a "newoperator" already and 
+append a new 
 div with the 3+ OPERANDs !
 
 *Calc should not evaluate more than a single pair of numbers at a time!

@@ -7,6 +7,8 @@
     <title>Calculator
     </title>
     <link rel="stylesheet" href="style.css">
+    <script src="script2.js" defer ></script>
+
   </head>
   <body>
 
@@ -15,9 +17,9 @@
         <div class = "calcContainer">
             <div class="calcScreen">
                 <div class="operationScreen" id="operationScreen">
-                    <div class= "firstOperand"></div>
+                    <!-- <div class= "firstOperand"></div>
                     <div class= "operator"></div>
-                    <div class= "secondOperand"></div>
+                    <div class= "secondOperand"></div> -->
                 </div>
                 <div class="resultScreen">0</div>
             </div>
@@ -44,7 +46,7 @@
                     <div><button class="numbtn"     value="3" data-number="3">3</button></div>
                     <div><button class="numbtn"     value="6" data-number="6">6</button></div>
                     <div><button class="numbtn"     value="9" data-number="9">9</button></div>
-                    <div class="equals"> <button class="equalsBtn" value="=">=</button> </div>
+                    <div class="equals"> <button class="equalsBtn" value="=" data-attribute="=">=</button> </div>
                 </div>
                 <div class="operatorrow">
                     <button class="operatorBtn"               data-operator="+">+</button>
@@ -76,7 +78,6 @@
         </div>
         
     </div>
-    <script src="script.js" ></script>
 
   </body>
 </html>
